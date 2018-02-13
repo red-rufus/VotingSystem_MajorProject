@@ -8,6 +8,11 @@ char pword[10] = {"rajat@123"};
 void message();
 void login();
 void information_desk(char);
+void user1();
+void user2();
+void user3();
+void user4();
+void user5();
 
 char choice;
 

@@ -4,17 +4,17 @@
 using namespace std;
 
 char pword[10] = {"rajat@123"};
+char choice;
+int uno;
 
 void message();
 void login();
 void information_desk(char);
 void user1();
-void user2();
-void user3();
-void user4();
-void user5();
-
-char choice;
+//void user2();
+//void user3();
+//void user4();
+//void user5();
 
 int main()
 {
@@ -24,17 +24,17 @@ int main()
     cout<<"Show voting procedure? <Y/N>"<<endl;
     cin>>choice;
     information_desk(choice);
-    cout<<"Press any key to continue..."<<endl;
-    getch();
+    system("cls");
     cout<<"Enter your user no.: ";
     cin>>uno;
+    system("cls");
     switch(uno)
     {
         case 100: user1(); break;
-        case 101: user2(); break;
-        case 102: user3(); break;
-        case 103: user4(); break;
-        case 104: user5(); break;
+        //case 101: user2(); break;
+        //case 102: user3(); break;
+        //case 103: user4(); break;
+        //case 104: user5(); break;
     }
 }
 void message()
@@ -72,10 +72,30 @@ void information_desk(char choice)
         cout<<"1. Enter your user no."<<endl;
         cout<<"2. Enter your CNIC"<<endl;
         cout<<"3. Vote your choice"<<endl;
+        cout<<"Press any key to continue..";
+    }
+    else
+    {
+        system("cls");
     }
 }
 
-void users()
+void user1()
 {
-
+    char one[5] = {"6029"};
+    char one1[5];
+    cout<<"Hello user 1!"<<endl;
+    jump:
+    cout<<"Enter CNIC no.: ";
+    cin>>one1;
+    system("cls");
+    if(strcmp(one, one1)==0)
+    {
+        cout<<"CNIC matched."<<endl;
+    }
+    else
+    {
+        cout<<"CNIC not matched."<<endl;
+        goto jump;
+    }
 }

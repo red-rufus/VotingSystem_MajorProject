@@ -21,6 +21,16 @@ int main()
     information_desk(choice);
     cout<<"Press any key to continue..."<<endl;
     getch();
+    cout<<"Enter your user no.: ";
+    cin>>uno;
+    switch(uno)
+    {
+        case 100: user1(); break;
+        case 101: user2(); break;
+        case 102: user3(); break;
+        case 103: user4(); break;
+        case 104: user5(); break;
+    }
 }
 void message()
 {
@@ -58,4 +68,9 @@ void information_desk(char choice)
         cout<<"2. Enter your CNIC"<<endl;
         cout<<"3. Vote your choice"<<endl;
     }
+}
+
+void users()
+{
+
 }

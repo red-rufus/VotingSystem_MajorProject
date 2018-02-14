@@ -7,7 +7,7 @@ char pword[10] = {"rajat@123"};
 char choice;
 int uno, total=0, myvote;
 int count1=0, count2=0, count3=0, count4=0, count5=0;
-int party1=0, party2=0, party3=0, party4=0;
+int party[4]={0, 0, 0, 0};
 
 void message();
 void login();
@@ -19,12 +19,14 @@ void user4();
 void user5();
 void ballot();
 void vote(int myvote);
+void results();
+void conclusion();
 
 int main()
 {
     message();
     login();
-    while(total<5)
+    while(total<2)
     {
         system("cls");
         cout<<"Show voting procedure? <Y/N>"<<endl;
@@ -45,6 +47,8 @@ int main()
             default: cout<<"User not found in the database.";
                     goto identify;
         }
+        results();
+        conclusion();
     }
 }
 void message()
@@ -291,11 +295,36 @@ void vote(int myvote)
 {
     switch(myvote)
     {
-        case 1: party1++; break;
-        case 2: party2++; break;
-        case 3: party3++; break;
-        case 4: party4++; break;
+        case 1: party[0]++; break;
+        case 2: party[1]++; break;
+        case 3: party[2]++; break;
+        case 4: party[3]++; break;
     }
     cout<<"Thank you for voting.";
     getch();
+}
+void results()
+{
+    system("cls");
+    cout<<"***********************************************Voting Results***********************************************"<<endl;
+    cout<<endl;
+    cout<<"Party#1: "<<party[0]<<" votes"<<endl;
+    cout<<"Party#2: "<<party[1]<<" votes"<<endl;
+    cout<<"Party#3: "<<party[2]<<" votes"<<endl;
+    cout<<"Party#4: "<<party[3]<<" votes"<<endl;
+}
+void conclusion()
+{
+    int maxvotes = party[0];
+    int winner;
+    for(int i=0; i<5; i++)
+    {
+        if(maxvotes<party[i])
+        {
+            maxvotes = party[i];
+            winner = i;
+        }
+    }
+    cout<<endl<<endl;
+    cout<<"Party#"<<winner+1<<" is the winner";
 }

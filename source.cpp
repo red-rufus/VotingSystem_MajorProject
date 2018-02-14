@@ -6,6 +6,7 @@ using namespace std;
 char pword[10] = {"rajat@123"};
 char choice;
 int uno, total=0, count1=0, count2=0, count3=0, count4=0, count5=0;
+int vote;
 
 void message();
 void login();
@@ -15,6 +16,7 @@ void user2();
 void user3();
 void user4();
 void user5();
+void ballot();
 
 int main()
 {
@@ -78,7 +80,8 @@ void information_desk(char choice)
         cout<<"1. Enter your user no."<<endl;
         cout<<"2. Enter your CNIC"<<endl;
         cout<<"3. Vote your choice"<<endl;
-        cout<<"Press any key to continue..";
+        cout<<"\n\nPress any key to continue..";
+        getch();
     }
     else
     {
@@ -102,6 +105,8 @@ void user1()
         if(strcmp(one, one1)==0)
         {
             cout<<"CNIC matched."<<endl;
+            ballot();
+            cin>>vote;
         }
         else
         {
@@ -127,6 +132,8 @@ void user2()
         if(strcmp(two, two2)==0)
         {
             cout<<"CNIC matched."<<endl;
+            ballot();
+            cin>>vote;
         }
         else
         {
@@ -152,6 +159,8 @@ void user3()
         if(strcmp(three, three3)==0)
         {
             cout<<"CNIC matched."<<endl;
+            ballot();
+            cin>>vote;
         }
         else
         {
@@ -177,6 +186,8 @@ void user4()
         if(strcmp(four, four4)==0)
         {
             cout<<"CNIC matched."<<endl;
+            ballot();
+            cin>>vote;
         }
         else
         {
@@ -202,6 +213,8 @@ void user5()
         if(strcmp(five, five5)==0)
         {
             cout<<"CNIC matched."<<endl;
+            ballot();
+            cin>>vote;
         }
         else
         {
@@ -210,4 +223,9 @@ void user5()
         }
     }
     else{cout<<"Sorry you have casted your vote!";}
+}
+void ballot()
+{
+    system("cls");
+    cout<<"1. Party#1\n2. Party#2\n3. Party#3\n4. Party#4\nPlease case your vote: ";
 }

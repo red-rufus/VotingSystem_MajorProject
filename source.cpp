@@ -99,3 +99,79 @@ void user1()
         goto jump;
     }
 }
+void user2()
+{
+    char two[5] = {"6029"};
+    char two2[5];
+    cout<<"Hello user 2!"<<endl;
+    jump:
+    cout<<"Enter CNIC no.: ";
+    cin>>two2;
+    system("cls");
+    if(strcmp(two, two2)==0)
+    {
+        cout<<"CNIC matched."<<endl;
+    }
+    else
+    {
+        cout<<"CNIC not matched."<<endl;
+        goto jump;
+    }
+}
+void user3()
+{
+    char three[5] = {"6029"};
+    char three3[5];
+    cout<<"Hello user 3!"<<endl;
+    jump:
+    cout<<"Enter CNIC no.: ";
+    cin>>three3;
+    system("cls");
+    if(strcmp(three, three3)==0)
+    {
+        cout<<"CNIC matched."<<endl;
+    }
+    else
+    {
+        cout<<"CNIC not matched."<<endl;
+        goto jump;
+    }
+}
+void user4()
+{
+    char four[5] = {"6029"};
+    char four4[5];
+    cout<<"Hello user 4!"<<endl;
+    jump:
+    cout<<"Enter CNIC no.: ";
+    cin>>four4;
+    system("cls");
+    if(strcmp(four, four4)==0)
+    {
+        cout<<"CNIC matched."<<endl;
+    }
+    else
+    {
+        cout<<"CNIC not matched."<<endl;
+        goto jump;
+    }
+}
+void user5()
+{
+    char five[5] = {"6029"};
+    char five5[5];
+    cout<<"Hello user 5!"<<endl;
+    jump:
+    cout<<"Enter CNIC no.: ";
+    cin>>five5;
+    system("cls");
+    if(strcmp(five, five5)==0)
+    {
+        cout<<"CNIC matched."<<endl;
+    }
+    else
+    {
+        cout<<"CNIC not matched."<<endl;
+        goto jump;
+    }
+}

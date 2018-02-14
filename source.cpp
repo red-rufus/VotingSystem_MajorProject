@@ -20,7 +20,7 @@ int main()
 {
     message();
     login();
-    while(total>5)
+    while(total<5)
     {
         system("cls");
         cout<<"Show voting procedure? <Y/N>"<<endl;
@@ -90,6 +90,8 @@ void user1()
 {
     if(count1 == 0)
     {
+        count1++;
+        total++;
         char one[5] = {"6029"};
         char one1[5];
         cout<<"Hello user 1!"<<endl;
@@ -113,6 +115,8 @@ void user2()
 {
     if(count2 == 0)
     {
+        count2++;
+        total++;
         char two[5] = {"6029"};
         char two2[5];
         cout<<"Hello user 2!"<<endl;
@@ -136,6 +140,8 @@ void user3()
 {
     if(count3 == 0)
     {
+        count3++;
+        total++;
         char three[5] = {"6029"};
         char three3[5];
         cout<<"Hello user 3!"<<endl;
@@ -159,6 +165,8 @@ void user4()
 {
     if(count4 == 0)
     {
+        count4++;
+        total++;
         char four[5] = {"6029"};
         char four4[5];
         cout<<"Hello user 4!"<<endl;
@@ -182,6 +190,8 @@ void user5()
 {
     if(count5 == 0)
     {
+        count5++;
+        total++;
         char five[5] = {"6029"};
         char five5[5];
         cout<<"Hello user 5!"<<endl;

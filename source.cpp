@@ -5,36 +5,39 @@ using namespace std;
 
 char pword[10] = {"rajat@123"};
 char choice;
-int uno;
+int uno, total=0;
 
 void message();
 void login();
 void information_desk(char);
 void user1();
-//void user2();
-//void user3();
-//void user4();
-//void user5();
+void user2();
+void user3();
+void user4();
+void user5();
 
 int main()
 {
     message();
     login();
-    system("cls");
-    cout<<"Show voting procedure? <Y/N>"<<endl;
-    cin>>choice;
-    information_desk(choice);
-    system("cls");
-    cout<<"Enter your user no.: ";
-    cin>>uno;
-    system("cls");
-    switch(uno)
+    while(total>5)
     {
-        case 100: user1(); break;
-        //case 101: user2(); break;
-        //case 102: user3(); break;
-        //case 103: user4(); break;
-        //case 104: user5(); break;
+        system("cls");
+        cout<<"Show voting procedure? <Y/N>"<<endl;
+        cin>>choice;
+        information_desk(choice);
+        system("cls");
+        cout<<"Enter your user no.: ";
+        cin>>uno;
+        system("cls");
+        switch(uno)
+        {
+            case 100: user1(); break;
+            case 101: user2(); break;
+            case 102: user3(); break;
+            case 103: user4(); break;
+            case 104: user5(); break;
+        }
     }
 }
 void message()

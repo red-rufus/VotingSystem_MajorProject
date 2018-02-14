@@ -5,8 +5,9 @@ using namespace std;
 
 char pword[10] = {"rajat@123"};
 char choice;
-int uno, total=0, count1=0, count2=0, count3=0, count4=0, count5=0;
-int vote;
+int uno, total=0, myvote;
+int count1=0, count2=0, count3=0, count4=0, count5=0;
+int party1=0, party2=0, party3=0, party4=0;
 
 void message();
 void login();
@@ -17,6 +18,7 @@ void user3();
 void user4();
 void user5();
 void ballot();
+void vote(int myvote);
 
 int main()
 {
@@ -105,8 +107,20 @@ void user1()
         if(strcmp(one, one1)==0)
         {
             cout<<"CNIC matched."<<endl;
+            voting:
             ballot();
-            cin>>vote;
+            cin>>myvote;
+            if(myvote>0 && myvote<5)
+            {
+                vote(myvote);
+            }
+            else
+            {
+                cout<<"Invalid selection.\nPress any key to try again!";
+                getch();
+                goto voting;
+            }
+
         }
         else
         {
@@ -132,8 +146,19 @@ void user2()
         if(strcmp(two, two2)==0)
         {
             cout<<"CNIC matched."<<endl;
+            voting:
             ballot();
-            cin>>vote;
+            cin>>myvote;
+            if(myvote>0 && myvote<5)
+            {
+                vote(myvote);
+            }
+            else
+            {
+                cout<<"Invalid selection.\nPress any key to try again!";
+                getch();
+                goto voting;
+            }
         }
         else
         {
@@ -159,8 +184,19 @@ void user3()
         if(strcmp(three, three3)==0)
         {
             cout<<"CNIC matched."<<endl;
+            voting:
             ballot();
-            cin>>vote;
+            cin>>myvote;
+            if(myvote>0 && myvote<5)
+            {
+                vote(myvote);
+            }
+            else
+            {
+                cout<<"Invalid selection.\nPress any key to try again!";
+                getch();
+                goto voting;
+            }
         }
         else
         {
@@ -186,8 +222,19 @@ void user4()
         if(strcmp(four, four4)==0)
         {
             cout<<"CNIC matched."<<endl;
+            voting:
             ballot();
-            cin>>vote;
+            cin>>myvote;
+            if(myvote>0 && myvote<5)
+            {
+                vote(myvote);
+            }
+            else
+            {
+                cout<<"Invalid selection.\nPress any key to try again!";
+                getch();
+                goto voting;
+            }
         }
         else
         {
@@ -213,8 +260,19 @@ void user5()
         if(strcmp(five, five5)==0)
         {
             cout<<"CNIC matched."<<endl;
+            voting:
             ballot();
-            cin>>vote;
+            cin>>myvote;
+            if(myvote>0 && myvote<5)
+            {
+                vote(myvote);
+            }
+            else
+            {
+                cout<<"Invalid selection.\nPress any key to try again!";
+                getch();
+                goto voting;
+            }
         }
         else
         {
@@ -227,5 +285,17 @@ void user5()
 void ballot()
 {
     system("cls");
-    cout<<"1. Party#1\n2. Party#2\n3. Party#3\n4. Party#4\nPlease case your vote: ";
+    cout<<"1. Party#1\n2. Party#2\n3. Party#3\n4. Party#4\n\nPlease case your vote: ";
+}
+void vote(int myvote)
+{
+    switch(myvote)
+    {
+        case 1: party1++; break;
+        case 2: party2++; break;
+        case 3: party3++; break;
+        case 4: party4++; break;
+    }
+    cout<<"Thank you for voting.";
+    getch();
 }
